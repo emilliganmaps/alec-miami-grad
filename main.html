@@ -3,7 +3,7 @@
     
 <head>
     <meta charset="utf-8" />
-    <title>Display a map</title>
+    <title>Alec's Graduation Map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
@@ -29,62 +29,10 @@
     
 <body>
     
-<style>
-    
-    .filter-group {
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1;
-    border-radius: 3px;
-    width: 120px;
-    color: #fff;
-    }
-
-    .filter-group input[type='checkbox']:first-child + label {
-    border-radius: 3px 3px 0 0;
-    }
-
-    .filter-group label:last-child {
-    border-radius: 0 0 3px 3px;
-    border: none;
-    }
-
-    .filter-group input[type='checkbox'] {
-    display: none;
-    }
-
-    .filter-group input[type='checkbox'] + label {
-    background-color: #3386c0;
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    }
-
-    .filter-group input[type='checkbox'] + label {
-    background-color: #3386c0;
-    text-transform: capitalize;
-    }
-
-    .filter-group input[type='checkbox'] + label:hover,
-    .filter-group input[type='checkbox']:checked + label {
-    background-color: #4ea0da;
-    }
-
-    .filter-group input[type='checkbox']:checked + label:before {
-    content: '✔';
-    margin-right: 5px;
-    }
-    
-</style>
-    
 <div id="map"></div>
     
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pbGxpZ2FuIiwiYSI6ImNrYTJ4NDhhdjBpOHQzZ3FraGJ3dTFuZ2kifQ.AVPBxDtMRVWFrHbNPN6sRA';
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pbGxpZ2FuIiwiYSI6ImNrYTQzYXgzcjA0dmczZm5pMjliMWl0OW4ifQ.hZaHkI6bWwH9PE9655sw8A';
     var map = new mapboxgl.Map({
         container: 'map',   //container id
         style: 'mapbox://styles/emilligan/cka2jq4wy4rg81inw8ui81j2u',   //stylesheet location
