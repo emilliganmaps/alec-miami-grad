@@ -32,13 +32,14 @@
 <div id="map"></div>
     
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pbGxpZ2FuIiwiYSI6ImNrYTQzYXgzcjA0dmczZm5pMjliMWl0OW4ifQ.hZaHkI6bWwH9PE9655sw8A';
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZW1pbGxpZ2FuIiwiYSI6ImNrYTJ4NDhhdjBpOHQzZ3FraGJ3dTFuZ2kifQ.AVPBxDtMRVWFrHbNPN6sRA';
     var map = new mapboxgl.Map({
         container: 'map',   //container id
         style: 'mapbox://styles/emilligan/cka2jq4wy4rg81inw8ui81j2u',   //stylesheet location
-        center: [-97.8, 39.828],    //starting position [lng, lat]
-        zoom: 3.5,  //starting zoom
-
+        center: [-95.8, 39.028],    //starting position [lng, lat]
+        zoom: 3.75,  //starting zoom
+        minZoom: 3.75, //minimum zoom level
+        maxZoom: 11.5   //maximum zoom level
     });
     
     //disable map rotation using right click + drag
@@ -62,12 +63,24 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Mom and Carl</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Mom and Carl!</a></p>',
+                                        '<strong>From Mom</strong><p><a href="https://youtu.be/2BxX-V3soDo" target="_blank" title="Opens in a new window">Click to see a message from Mom!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
                                     'type': 'Point',
                                     'coordinates': [-88.499, 43.119]
+                                    }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Carl</strong><p><a href="https://youtu.be/zJ1SfBLUa8g" target="_blank" title="Opens in a new window">Click to see a message from Carl!</a></p>',
+                                    'icon': 'miami'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-88.531, 43.163]
                                     }
                             },
                             {
@@ -98,7 +111,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Claire T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Claire!</a></p>',
+                                        '<strong>From Claire T.</strong><p><a href="https://youtu.be/EWnjBCm6I8g" target="_blank" title="Opens in a new window">Click to see a message from Claire!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -110,7 +123,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Rob T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Rob!</a></p>',
+                                        '<strong>From Rob T.</strong><p><a href="https://youtu.be/BDTgtaJuxbc" target="_blank" title="Opens in a new window">Click to see a message from Rob!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -122,7 +135,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From David T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from David!</a></p>',
+                                        '<strong>From David T.</strong><p><a href="https://youtu.be/QsD6xLATJ0I" target="_blank" title="Opens in a new window">Click to see a message from David!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -158,7 +171,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Katie and Chris B.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Katie and Chris!</a></p>',
+                                        '<strong>From Katie and Chris B.</strong><p><a href="https://youtu.be/q8zlaLxoE5I" target="_blank" title="Opens in a new window">Click to see a message from Katie and Chris!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -170,7 +183,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Fritz and Lisa T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Fritz and Lisa!</a></p>',
+                                        '<strong>From the LFs</strong><p><a href="https://youtu.be/4_yPNkdb-xY" target="_blank" title="Opens in a new window">Click to see their video message!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -182,19 +195,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Michael T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Michael!</a></p>',
-                                    'icon': 'miami'
-                                },
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-122.5311, 37.9735]
-                                }
-                            },
-                            {
-                                'type': 'Feature',
-                                'properties': {
-                                    'description':
-                                        '<strong>From Emily L.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Emily!</a></p>',
+                                        '<strong>From Emily L.</strong><p><a href="https://youtu.be/UIJviWd4N2o" target="_blank" title="Opens in a new window">Click to see a message from Emily!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -206,7 +207,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Ellie & Josh M.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Ellie & Josh!</a></p>',
+                                        '<strong>From Ellie</strong><p><a href="https://youtu.be/k34ZJ43tZA0" target="_blank" title="Opens in a new window">Click to see a message from Ellie!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -218,7 +219,7 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Sarah M.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Sarah!</a></p>',
+                                        '<strong>From Mrs. M.</strong><p><a href="https://youtu.be/lxUQgH3_-Ug" target="_blank" title="Opens in a new window">Click to see a message from Mrs. M!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -230,19 +231,19 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Colin O.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Colin!</a></p>',
+                                        '<strong>From Zach M.</strong><p><a href="https://youtu.be/FTHdtZDOJ3s" target="_blank" title="Opens in a new window">Click to see a message from Zach!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
                                     'type': 'Point',
-                                    'coordinates': [-89.094, 42.271]
+                                    'coordinates': [-96.797, 32.777]
                                 }
                             },
                             {
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Emily M.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Emily!</a></p>',
+                                        '<strong>From Emily M.</strong><p><a href="https://youtu.be/hIXuw5MmVl4" target="_blank" title="Opens in a new window">Click to see a message from Emily!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
@@ -254,12 +255,36 @@
                                 'type': 'Feature',
                                 'properties': {
                                     'description':
-                                        '<strong>From Drew and Heather T.</strong><p><a href="https://miamioh.edu/commencement/index.html" target="_blank" title="Opens in a new window">Click to see a message from Heather and Drew!</a></p>',
+                                        '<strong>From The P Family</strong><p><a href="https://youtu.be/px6SaUzJQ94" target="_blank" title="Opens in a new window">Click to see their message!</a></p>',
                                     'icon': 'miami'
                                 },
                                 'geometry': {
                                     'type': 'Point',
-                                    'coordinates': [-118.244, 34.0522]
+                                    'coordinates': [-88.163, 43.039]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Alayna H.</strong><p><a href="https://youtu.be/uMwuLUuqr_g" target="_blank" title="Opens in a new window">Click to see a message from Alayna!</a></p>',
+                                    'icon': 'miami'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-88.448, 42.315]
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong>From Collin O.</strong><p><a href="https://youtu.be/VrArMl7Wams" target="_blank" title="Opens in a new window">Click to see a message from Collin!</a></p>',
+                                    'icon': 'miami'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-89.073, 42.451]
                                 }
                             }
                         ]
